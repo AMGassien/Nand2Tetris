@@ -1,0 +1,189 @@
+Function Main.new 3 
+pop err404pop err404pop err404Function Main.dispose 0 
+Function Main.draw 0 
+Function Main.erase 0 
+Function Main.incSize 0 
+Function Main.decSize 0 
+Function Main.moveUp 0 
+Function Main.moveDown 0 
+Function Main.moveLeft 0 
+Function Main.moveRight 0 
+Function Main.getY 0 
+Function Main.getX 0 
+Function Main.getSize 0 
+Function Main.new 3 
+push ARG 0pop err404push ARG 1pop err404push ARG 2pop err404push pointer 0Function Main.dispose 0 
+Function Main.draw 0 
+Function Main.erase 0 
+Function Main.incSize 0 
+Function Main.decSize 0 
+Function Main.moveUp 0 
+Function Main.moveDown 0 
+Function Main.moveLeft 0 
+Function Main.moveRight 0 
+Function Main.getY 0 
+push this 1Function Main.getX 0 
+push this 0Function Main.getSize 0 
+push this 2Function Main.new 3 
+push ARG 0
+pop err404push ARG 1
+pop err404push ARG 2
+pop err404push pointer 0
+Function Main.dispose 0 
+Function Main.draw 0 
+Function Main.erase 0 
+Function Main.incSize 0 
+Function Main.decSize 0 
+Function Main.moveUp 0 
+Function Main.moveDown 0 
+Function Main.moveLeft 0 
+Function Main.moveRight 0 
+Function Main.getY 0 
+push this 1
+Function Main.getX 0 
+push this 0
+Function Main.getSize 0 
+push this 2
+Function Main.new 3 
+push ARG 0
+pop err404push ARG 1
+pop err404push ARG 2
+pop err404push pointer 0
+Function Main.dispose 0 
+Function Main.draw 0 
+Function Main.erase 0 
+Function Main.incSize 0 
+Function Main.decSize 0 
+Function Main.moveUp 0 
+Function Main.moveDown 0 
+Function Main.moveLeft 0 
+Function Main.moveRight 0 
+Function Main.getY 0 
+push this 1
+Function Main.getX 0 
+push this 0
+Function Main.getSize 0 
+push this 2
+Function Main.new 3 
+push ARG 0
+pop err404push ARG 1
+pop err404push ARG 2
+pop err404push pointer 0
+Function Main.dispose 0 
+Function Main.draw 0 
+Function Main.erase 0 
+Function Main.incSize 0 
+push this 1
+push this 2
+addpush constant 254
+ltpush this 0
+push this 2
+addpush constant 510
+ltand
+Function Main.decSize 0 
+push this 2
+push constant 2
+gtFunction Main.moveUp 0 
+push this 1
+push constant 1
+gtFunction Main.moveDown 0 
+push this 1
+push this 2
+addpush constant 254
+ltFunction Main.moveLeft 0 
+push this 0
+push constant 1
+gtFunction Main.moveRight 0 
+push this 0
+push this 2
+addpush constant 510
+ltFunction Main.getY 0 
+push this 1
+Function Main.getX 0 
+push this 0
+Function Main.getSize 0 
+push this 2
+Function Main.new 3 
+push ARG 0
+pop err404push ARG 1
+pop err404push ARG 2
+pop err404push pointer 0
+Function Main.dispose 0 
+Function Main.draw 0 
+Function Main.erase 0 
+Function Main.incSize 0 
+push this 1
+push this 2
+addpush constant 254
+ltpush this 0
+push this 2
+addpush constant 510
+ltand
+Function Main.new 3 
+push ARG 0
+pop err404push ARG 1
+pop err404push ARG 2
+pop err404push pointer 0
+Function Main.dispose 0 
+Function Main.draw 0 
+Function Main.erase 0 
+Function Main.incSize 0 
+push this 1
+push this 2
+addpush constant 254
+ltpush this 0
+push this 2
+addpush constant 510
+ltand
+Function Main.new 3 
+push ARG 0
+pop err404push ARG 1
+pop err404push ARG 2
+pop err404push pointer 0
+Function Main.dispose 0 
+Function Main.draw 0 
+Function Main.erase 0 
+Function Main.incSize 0 
+push this 1
+push this 2
+addpush constant 254
+ltpush this 0
+push this 2
+addpush constant 510
+ltand
+Function Main.new 3 
+push ARG 0
+pop err404push ARG 1
+pop err404push ARG 2
+pop err404push pointer 0
+Function Main.dispose 0 
+Function Main.draw 0 
+Function Main.erase 0 
+Function Main.incSize 0 
+push this 1
+push this 2
+addpush constant 254
+ltpush this 0
+push this 2
+addpush constant 510
+ltand
+Function Main.new 3 
+push ARG 0
+pop err404push ARG 1
+pop err404push ARG 2
+pop err404push pointer 0
+Function Main.dispose 0 
+Function Main.draw 0 
+Function Main.erase 0 
+Function Main.incSize 0 
+Function Main.decSize 0 
+Function Main.moveUp 0 
+Function Main.moveDown 0 
+Function Main.moveLeft 0 
+Function Main.moveRight 0 
+Function Main.getY 0 
+push this 1
+Function Main.getX 0 
+push this 0
+Function Main.getSize 0 
+push this 2

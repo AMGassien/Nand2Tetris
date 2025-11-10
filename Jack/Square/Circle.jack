@@ -1,0 +1,47 @@
+class Circle {
+
+   field int x, y; // screen location of the center of this circle
+   field int radius; // radius of the circle, in pixels
+
+   /** Constructs and draws a new circle with a given location and radius. */
+   constructor Circle new(int ax, int ay, int aradius) {
+      let x = ax;
+      let y = ay;
+      let radius = aradius;
+      do draw();
+      return this;
+   }
+
+   /** Disposes this circle. */
+   method void dispose() {
+      do Memory.deAlloc(this);
+      return;
+   }
+
+   /** Draws this circle in its current (x,y) location */
+   method void draw() {
+      // Draws the circle using the color black
+      do Screen.setColor(true);
+      do Screen.drawCircle(x, y, radius);
+      return;
+   }
+   
+   method Circle respawn(int ax, int ay) {
+      let x = ax;
+      let y = ay;
+	  do draw();
+	  return this;
+   }
+   
+    method int getX() {
+      return x;
+   }
+	
+	method int getY() {
+      return y;
+   }
+   
+   method int getRadius() {
+		return radius;
+   }
+}

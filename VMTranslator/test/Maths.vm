@@ -1,0 +1,30 @@
+goto skipMaths
+Function mult 2
+    push constant 0
+    pop local 0
+    push constant 1
+    pop local 1
+
+    label FMULTLOOP
+    push argument 0
+    push local 0
+    add
+    pop local 0
+
+    push argument 1
+    push local 1
+    eq
+    if-goto FMULTEND
+
+    push local 1
+    push constant 1
+    add
+    pop local 1
+    goto FMULTLOOP
+
+    label FMULTEND
+    push local 0
+return
+label skipMaths
+
+label continue

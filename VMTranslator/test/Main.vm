@@ -1,0 +1,48 @@
+Function main 0
+push constant 1
+    push constant 2
+    push constant 3
+    Call mult 2
+    push constant 2
+    push constant 9
+    Call mult 2
+    lt
+    push constant 710
+    push constant 666
+    neg
+    gt
+    and
+    if-goto vrai
+
+    label zombie
+push constant 3
+    push constant 15
+    push constant 15
+    eq
+    if-goto presque
+
+    goto continue
+
+    label vrai
+push constant 2
+    push constant 710
+    push constant 91
+    sub
+    push constant 0
+    not
+    or
+    if-goto zombie
+
+label presque
+    pop temp 0
+    pop temp 1
+    pop temp 2
+    push constant 300
+    pop pointer 0
+    push constant 400
+    pop pointer 1
+    push constant 710
+    pop static 0
+
+label fin
+goto fin

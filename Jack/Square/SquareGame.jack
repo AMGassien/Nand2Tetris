@@ -1,0 +1,164 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/11/Square/SquareGame.jack
+/**
+ * Implements the Square game.
+ * This simple game allows the user to move a black square around
+ * the screen, and change the square's size during the movement.
+ * When the game starts, a square of 30 by 30 pixels is shown at the
+ * top-left corner of the screen. The user controls the square as follows.
+ * The 4 arrow keys are used to move the square up, down, left, and right.
+ * The 'z' and 'x' keys are used, respectively, to decrement and increment
+ * the square's size. The 'q' key is used to quit the game.
+ */
+class SquareGame {
+   field Square square; // the square of this game
+   field int direction; // the square's current direction: 
+   field Circle circle;
+   field Circle d1, d2, d3, d4, d5, d6, d7, d8;
+   field int cx,cy, dhgx, dhgy, dbdx, dbdy;
+                        // 0=none, 1=up, 2=down, 3=left, 4=right
+
+   /** Constructs a new square game. */
+   constructor SquareGame new() {
+      // The initial square is located in (0,0), has size 30, and is not moving.
+      let square = Square.new(0, 0, 30);
+	  let circle = Circle.new(485, 15, 2);
+	  let d1 = Circle.new(420,35,35);
+	  let d2 = Circle.new(480,120,30);
+	  let d3 = Circle.new(320,140,60);
+	  let d4 = Circle.new(75,230,10);
+	  let d5 = Circle.new(120,40,40);
+	  let d6 = Circle.new(90,125,40);
+	  let d7 = Circle.new(450,200,25);
+	  let d8 = Circle.new(270,205,50);
+      let direction = 0;
+      return this;
+   }
+
+   /** Disposes this game. */
+   method void dispose() {
+      do square.dispose();
+      do Memory.deAlloc(this);
+      return;
+   }
+
+   /** Moves the square in the current direction. */
+   method void moveSquare() {
+      if (direction = 1) { do square.moveUp(); }
+      if (direction = 2) { do square.moveDown(); }
+      if (direction = 3) { do square.moveLeft(); }
+      if (direction = 4) { do square.moveRight(); }
+	  do wincon();
+      do Sys.wait(5);  // delays the next movement
+      return;
+   }
+   
+   method void wincon() {
+		let cx = circle.getX();
+		let cy = circle.getY();
+		let dhgx = square.getX();
+		let dhgy = square.getY();
+		let dbdx = square.getX()+square.getSize();
+		let dbdy = square.getY()+square.getSize();
+		if ( (cx>dhgx) & (cx<dbdx) & (cy>dhgy) & (cy<dbdy) ) {
+            while (true) { do Output.printString("YOU WON !"); }		}
+   
+		let cx = square.getX()+square.getSize()+square.getSize()-square.getSize();
+		let cy = square.getY()+square.getSize()+square.getSize()-square.getSize();
+		let dhgx = d1.getX()-d1.getRadius();
+		let dhgy = d1.getY()-d1.getRadius();
+		let dbdx = d1.getX()+d1.getRadius();
+		let dbdy = d1.getY()+d1.getRadius();
+		if ( (cx>dhgx) & (cx<dbdx) & (cy>dhgy) & (cy<dbdy) ) {
+           while (true) { do Main.main(); }		}
+		
+		let dhgx = d2.getX()-d2.getRadius();
+		let dhgy = d2.getY()-d2.getRadius();
+		let dbdx = d2.getX()+d2.getRadius();
+		let dbdy = d2.getY()+d2.getRadius();
+		if ( (cx>dhgx) & (cx<dbdx) & (cy>dhgy) & (cy<dbdy) ) {
+           while (true) { do Main.main(); }		}
+		   
+		let dhgx = d3.getX()-d3.getRadius();
+		let dhgy = d3.getY()-d3.getRadius();
+		let dbdx = d3.getX()+d3.getRadius();
+		let dbdy = d3.getY()+d3.getRadius();
+		if ( (cx>dhgx) & (cx<dbdx) & (cy>dhgy) & (cy<dbdy) ) {
+           while (true) { do Main.main(); }		}
+		   
+		let dhgx = d4.getX()-d4.getRadius();
+		let dhgy = d4.getY()-d4.getRadius();
+		let dbdx = d4.getX()+d4.getRadius();
+		let dbdy = d4.getY()+d4.getRadius();
+		if ( (cx>dhgx) & (cx<dbdx) & (cy>dhgy) & (cy<dbdy) ) {
+           while (true) { do Main.main(); }		}
+		   
+		let dhgx = d5.getX()-d5.getRadius();
+		let dhgy = d5.getY()-d5.getRadius();
+		let dbdx = d5.getX()+d5.getRadius();
+		let dbdy = d5.getY()+d5.getRadius();
+		if ( (cx>dhgx) & (cx<dbdx) & (cy>dhgy) & (cy<dbdy) ) {
+           while (true) { do Main.main(); }		}
+		   
+		let dhgx = d6.getX()-d6.getRadius();
+		let dhgy = d6.getY()-d6.getRadius();
+		let dbdx = d6.getX()+d6.getRadius();
+		let dbdy = d6.getY()+d6.getRadius();
+		if ( (cx>dhgx) & (cx<dbdx) & (cy>dhgy) & (cy<dbdy) ) {
+           while (true) { do Main.main(); }		}
+		
+		let dhgx = d7.getX()-d7.getRadius();
+		let dhgy = d7.getY()-d7.getRadius();
+		let dbdx = d7.getX()+d7.getRadius();
+		let dbdy = d7.getY()+d7.getRadius();
+		if ( (cx>dhgx) & (cx<dbdx) & (cy>dhgy) & (cy<dbdy) ) {
+           while (true) { do Main.main(); }		}
+		
+		let dhgx = d8.getX()-d8.getRadius();
+		let dhgy = d8.getY()-d8.getRadius();
+		let dbdx = d8.getX()+d8.getRadius();
+		let dbdy = d8.getY()+d8.getRadius();
+		if ( (cx>dhgx) & (cx<dbdx) & (cy>dhgy) & (cy<dbdy) ) {
+           while (true) { do Main.main(); }		}
+		
+		return;
+   }
+   
+
+   /** Runs the game: handles the user's inputs and moves the square accordingly */
+   method void run() {
+      var char key;  // the key currently pressed by the user
+      var boolean exit;
+      let exit = false;
+      
+      while (~exit) {
+         // waits for a key to be pressed
+         while (key = 0) {
+		 let direction = 0;
+            let key = Keyboard.keyPressed();
+			// Add the condition to check if square and circle are at the same coordinates
+			do wincon();
+			
+         }
+         if (key = 81)  { let exit = true; }     // q key
+         if (key = 82)  { do square.decSize(); } // r key
+         if (key = 65)  { do square.incSize(); } // a key
+         if (key = 131) { let direction = 1; do wincon();}   // up arrow
+         if (key = 133) { let direction = 2; do wincon();}   // down arrow
+         if (key = 130) { let direction = 3; do wincon();}   // left arrow
+         if (key = 132) { let direction = 4; do wincon();}   // right arrow
+		 
+         // waits for the key to be released
+         while (~(key = 0)) {
+            let key = Keyboard.keyPressed();
+            do moveSquare();
+         }
+     } // while
+     return;
+   }
+}
+
+
+
