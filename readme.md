@@ -2,8 +2,7 @@
 # **TD1 - TPA - Groupe A-3**  
 **Participants :**  
 - AMGHAR Gassien  
-- DOUCHET Loïc  
-- BAUDARD Nathan
+- DOUCHET Loïc
 
 ---
 
